@@ -34,9 +34,9 @@ jobs:
         
         # MYSQL Docker Image build and push
         docker build -f Dockerfile_mysql -t $ECR_REGISTRY/clo835-a2:db .
-        docker push $ECR_REGISTRY/clo835-a1:db
+        docker push $ECR_REGISTRY/clo835-a2:db
         
         # APP Docker Image build and push
         docker build -f Dockerfile -t $ECR_REGISTRY/clo835-a2:app .
-        docker push $ECR_REGISTRY/clo835-a1:app
+        docker push $ECR_REGISTRY/clo835-a2:app
         
