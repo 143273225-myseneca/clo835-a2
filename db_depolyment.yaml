@@ -19,12 +19,6 @@ spec:
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: "pw"
-        - name: MYSQL_DATABASE
-          value: "employees"
-        - name: MYSQL_USER  # Corrected from MYSQL_ROOT_USER to MYSQL_USER
-          value: "root"
         ports:
         - containerPort: 3306
         imagePullPolicy: Always
-
-    
