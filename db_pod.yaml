@@ -8,7 +8,5 @@ spec:
   - name: mysql-xinyueli
     image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:db
       value: "pw"
-    - name: MYSQL_DATABASE
-      value: employees
     ports:
     - containerPort: 3306
