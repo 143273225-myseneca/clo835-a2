@@ -6,15 +6,17 @@ metadata:
 spec:
   containers:
   - name: app-container
-    image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:app
+    image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:my_app
     ports:
     - containerPort: 8080
     env:
     - name: DBHOST
-      value: "db-svc.sqldb.svc.cluster.local"
+      value: 10.244.0.52
+    - name: DBPORT
+      value: "3306"
     - name: DBUSER
       value: "root"
     - name: DBPWD
       value: "pw"
-    - name: DBPORT
-      value: "3306"
+
+
