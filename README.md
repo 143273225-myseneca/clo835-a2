@@ -1,4 +1,3 @@
-#CLO835-a2 K8S
 # Install the required MySQL package
 
 sudo apt-get update -y
