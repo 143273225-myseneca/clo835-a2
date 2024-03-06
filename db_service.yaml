@@ -5,8 +5,9 @@ metadata:
   namespace: sqldb
 spec:
   selector:
-    app: app-pod
+    app: mysql
   ports:
-    - protocol: TCP
-      port: 8080
-      targetPort: 8080
+    - protocol: ClusterIP
+      port: 3306
+      targetPort: 3306
+
