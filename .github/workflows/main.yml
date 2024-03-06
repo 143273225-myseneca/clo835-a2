@@ -32,11 +32,11 @@ jobs:
 
       run: |
         
-        # MYSQL Docker build and push
-        docker build -f Dockerfile_mysql -t $ECR_REGISTRY/clo835-a2:db .
+        # MYSQL IMAGE Docker build and push
+        docker build -f Dockerfile_mysql -t $ECR_REGISTRY/clo835-assignment2:db .
         docker push $ECR_REGISTRY/clo835-assignment2:db
         
-        # APP Docker build and push
-        docker build -f Dockerfile -t $ECR_REGISTRY/clo835-a2:app .
+        # APP IMAGE Docker build and push
+        docker build -f Dockerfile -t $ECR_REGISTRY/clo835-assignment2:app .
         docker push $ECR_REGISTRY/clo835-assignment2:app
         
