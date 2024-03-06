@@ -11,8 +11,7 @@ spec:
     - containerPort: 8080
     env:
     - name: DBHOST
-    #ip of mydql-pod
-      value: 10.244.0.6
+      value: 10.244.0.7
     - name: DBUSER
       value: "root"
     - name: DBPWD
