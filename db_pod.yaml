@@ -7,6 +7,10 @@ spec:
   containers:
   - name: mysql-xinyueli
     image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:db
+    env:
+    - name: MYSQL_ROOT_PASSWORD
       value: "pw"
+      name: MYSQL_ROOT_USER
+      value: "root"
     ports:
     - containerPort: 3306
