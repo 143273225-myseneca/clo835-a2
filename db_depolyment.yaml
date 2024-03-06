@@ -1,24 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysql-db-dep
+  name: mysql
   namespace: sqldb
+  labels:
+    app: mysql
 spec:
-  replicas: 3
   selector:
     matchLabels:
-      app: mysql-xinyueli 
-  template:  # Template for the Pods the deployment will manage
+      app: mysql
+  replicas: 3
+  template:
     metadata:
       labels:
-        app: mysql-xinyueli  # This label should match the selector above
+        app: mysql
     spec:
       containers:
-      - name: mysql-xinyueli
-        image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:db
-        env:
-        - name: MYSQL_ROOT_PASSWORD
-          value: "pw"
-        ports:
-        - containerPort: 3306
-        imagePullPolicy: Always
+        - name: mysql-xinyueli
+          image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:db
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: "pw"
+          ports:
+            - containerPort: 3306
