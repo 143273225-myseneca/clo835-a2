@@ -11,12 +11,10 @@ spec:
     - containerPort: 8080
     env:
     - name: DBHOST
-      value: 10.244.0.7
+      value: "db-svc.sqldb.svc.cluster.local"
     - name: DBUSER
       value: "root"
     - name: DBPWD
       value: "pw"
-    - name: DATABASE
-      value: employees
     - name: DBPORT
       value: "3306"
