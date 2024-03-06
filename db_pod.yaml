@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: mysql-xinyueli
-    image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:db:lastest
+    image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2@sha256:655405919c0e70ebd3f7f266544eba9c98afb7ddd6af37d684b8b74299f1244d
     env:
     - name: MYSQL_ROOT_PASSWORD
       value: "pw"
