@@ -6,7 +6,7 @@ metadata:
   labels:
     app: mysql
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: mysql
@@ -14,8 +14,6 @@ spec:
   - name: mysql-xinyueli
     image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:my_db
     env:
-    - name: MYSQL_ROOT_USER
-      value: "root"
     - name: MYSQL_ROOT_PASSWORD
       value: "pw"
     ports:
