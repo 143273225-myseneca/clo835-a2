@@ -3,8 +3,6 @@ kind: ReplicaSet
 metadata:
   name: app-replica
   namespace: webapp
-  labels:
-    app: employees
 spec:
   replicas: 3
   selector:
