@@ -14,7 +14,7 @@ spec:
         app: employees
     spec:
       containers:
-      - name: app-replica
+      - name: app-xinyueli
         image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:my_app
         env:
         - name: DBHOST
