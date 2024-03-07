@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: app-rs
+  name: app-replica
   namespace: app
   labels:
-    app: employee
+    app: employees
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: employee
+      app: employees
   template:
     metadata:
       labels:
-        app: employee
+        app: employees
     spec:
       containers:
       - name: app-replica
