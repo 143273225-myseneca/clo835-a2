@@ -1,9 +1,15 @@
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: ReplicaSet
 metadata:
-  name: mysql-db-pod
+  name: db-replica
   namespace: sqldb
+  labels:
+    app: mysql
 spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mysql
   containers:
   - name: mysql-xinyueli
     image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:my_db
