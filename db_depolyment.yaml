@@ -16,7 +16,7 @@ spec:
         app: mysql
     spec:
       containers:
-        - name: mysql-xinyueli
+        - name: mysql-dep-xinyueli
           image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:my_db
           env:
             - name: MYSQL_ROOT_PASSWORD
