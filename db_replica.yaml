@@ -1,25 +1,25 @@
 apiVersion: apps/v1
-kind: ReplicaSet # Defines the kind of Kubernetes resource, in this case, a ReplicaSet
+kind: ReplicaSet
 metadata:
-  name: db-replica # Name of the ReplicaSet
-  namespace: sqldb # Specifies the namespace the ReplicaSet will be created in
+  name: db-replica
+  namespace: sqldb
   labels:
-    app: mysql # Labels applied to the ReplicaSet, useful for querying objects later
+    app: mysql
 spec:
-  replicas: 3 # Number of desired pods in the ReplicaSet
+  replicas: 3
   selector:
     matchLabels:
       app: mysql # Selector to identify the pods that belong to this ReplicaSet
-  template: # Template for the pods that will be created
+  template:
     metadata:
       labels:
-        app: mysql # Labels applied to each pod created by this ReplicaSet
+        app: mysql
     spec: 
       containers:
-      - name: mysql-xinyueli # Name of the container within the pod
-        image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:my_db # Docker image to use for the container
-        env: # Environment variables to set in the container
+      - name: mysql-xinyueli 
+        image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:my_db 
+        env:
           - name: MYSQL_ROOT_PASSWORD
-            value: "pw" # Environment variable for MySQL root password
+            value: "pw" 
         ports:
           - containerPort: 3306 # Port that the container exposes
