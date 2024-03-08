@@ -1,20 +1,20 @@
-apiVersion: v1
-kind: Pod
+apiVersion: v1  # Specifies the Kubernetes API version being used
+kind: Pod  # Defines the type of Kubernetes resource being created, which is a Pod
 metadata:
-  name: app-pod
-  namespace: webapp
+  name: app-pod  # Specifies the name of the Pod
+  namespace: webapp  # Specifies the namespace in which the Pod will be created
 spec:
   containers:
-  - name: app-container
-    image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:my_app
+  - name: app-container  # Specifies the name of the container within the Pod
+    image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:my_app  # Specifies the Docker image to use for the container
     ports:
-    - containerPort: 8080
-    env:
+    - containerPort: 8080  # Specifies the port number to expose from the container
+    env:  # Specifies the environment variables to be set within the container
     - name: DBHOST
-      value: "db-svc.sqldb.svc.cluster.local"
+      value: "db-svc.sqldb.svc.cluster.local"  # Specifies the IP
     - name: DBPORT
-      value: "3306"
+      value: "3306" 
     - name: DBUSER
-      value: "root"
+      value: "root" 
     - name: DBPWD
       value: "pw"
