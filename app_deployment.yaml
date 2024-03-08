@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: app-dep
-          image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:app
+          image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:my_app
           env:
             - name: DBHOST
               value: 10.244.0.13
@@ -27,3 +27,5 @@ spec:
               value: "root"
             - name: DBPWD
               value: "pw"
+          ports:
+          - containerPort: 8080
