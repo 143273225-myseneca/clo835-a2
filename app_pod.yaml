@@ -3,6 +3,8 @@ kind: Pod
 metadata:
   name: app-pod
   namespace: webapp
+  labels:
+    manifestType: pod
 spec:
   containers:
   - name: app-container
@@ -18,5 +20,3 @@ spec:
       value: "root"
     - name: DBPWD
       value: "pw"
-
-
