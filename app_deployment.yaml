@@ -16,8 +16,8 @@ spec:
         app: employees
     spec:
       containers:
-        - name: app-container
-          image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/my_app
+        - name: app-dep
+          image: 558655763449.dkr.ecr.us-east-1.amazonaws.com/clo835-a2:app
           env:
             - name: DBHOST
               value: 10.244.0.13
