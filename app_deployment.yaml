@@ -4,19 +4,16 @@ metadata:
   name: app
   namespace: webapp
   labels:
-    app: webapp
-    version: v1
+    app: employees
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: webapp
-      version: v1
+      app: employees
   template:
     metadata:
       labels:
-        app: webapp
-        version: v1
+        app: employees
     spec:
       containers:
         - name: app-container
